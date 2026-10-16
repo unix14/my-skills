@@ -24,7 +24,21 @@ SOFTWARE.
 
 NOTE ON SCOPE
 
-This license applies to the prompt text, documentation, and curation in this
-repository. The underlying patterns, techniques, and ideas that these prompts
-implement are the work of the authors credited in each skill's
+This license applies to the prompt text, documentation, and curation written for
+this repository. The underlying patterns, techniques, and ideas that these
+prompts implement are the work of the authors credited in each skill's
 "Credits & Origin" section, who retain all rights to their own work and wording.
+
+THIRD-PARTY CONTENT
+
+Some skills in this repository are redistributed verbatim from their original
+authors and are NOT covered by the license above. They are governed by their own
+license, whose notice ships in the same folder:
+
+  skills/grill-me/skill.md      Copyright (c) 2026 Matt Pocock   MIT
+  skills/grill-me/grilling.md   Copyright (c) 2026 Matt Pocock   MIT
+
+  Source:  https://github.com/mattpocock/skills
+  Notice:  skills/grill-me/LICENSE-mattpocock
+
+If you redistribute those files further, that notice must travel with them.

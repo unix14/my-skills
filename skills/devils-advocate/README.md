@@ -42,7 +42,7 @@ well, and it will not invent a statistic to strengthen an attack.
 
 - You need encouragement or momentum; this will take both.
 - The decision is already made and irreversible — criticism you cannot act on is just morale cost.
-- You want your *knowledge* tested rather than your *plan* — use [`grill-me`](../grill-me/).
+- You want your plan *mapped and settled* rather than attacked — use [`grill-me`](../grill-me/), which converges where this one pulls apart.
 
 ---
 

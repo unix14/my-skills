@@ -42,7 +42,7 @@ rather than lecturing.
 
 - You need precision for implementation — a simplified model will mislead you at the edges.
 - You need the rigorous version: the proof, the spec, the RFC. Read the source.
-- You already understand it and want to be tested — use [`grill-me`](../grill-me/).
+- You already understand it and want to be tested rather than taught — this skill only explains.
 
 ---
 
