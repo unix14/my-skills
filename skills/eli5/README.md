@@ -127,3 +127,22 @@ rights to their own work and wording. `skill.md` contains no copied text from
 the sources above — it is an independent prompt that operationalises publicly
 documented patterns. If you are one of these authors and would like the
 attribution changed or this skill removed, open an issue and it will be handled.
+
+### See also, and not a source
+
+Two of Matt Pocock's skills are neighbours of this one
+([mattpocock/skills](https://github.com/mattpocock/skills), MIT), and neither
+contributed anything to `skill.md`:
+
+- [`teach`](https://github.com/mattpocock/skills/blob/main/skills/productivity/teach/SKILL.md)
+  turns the working directory into a teaching workspace — a mission file, a
+  resource list, learning records, and one self-contained HTML lesson at a time,
+  pitched at your zone of proximal development and built around retrieval
+  practice and spacing. That is a course. This is a single answer. If you want to
+  learn a subject rather than understand one thing, his is the right tool, and
+  it is not close.
+- [`wait-what`](https://github.com/mattpocock/skills/blob/main/skills/productivity/wait-what/SKILL.md)
+  is a single paragraph that makes an agent re-pitch the message you just failed
+  to follow, in Simplified Technical English and the repo's own vocabulary. Same
+  instinct as this skill, aimed at the agent's last answer rather than at a
+  topic.

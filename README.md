@@ -64,6 +64,19 @@ shell script before you pipe it to your shell.
   His repo has around thirty more skills, several better than anything written
   here. Go there first.
 
+  The other skills here have since been checked against his collection — the
+  description of all 38 of his skills, and the full text of every one that could
+  plausibly overlap. None of them owes him anything: no mechanism, no wording,
+  no lineage. Three turned out to have a close neighbour in his collection and
+  now say so under their credits, framed as a neighbour and not as a source —
+  [`rubber-duck`](./skills/rubber-duck/) next to his `diagnosing-bugs`,
+  [`eli5`](./skills/eli5/) next to his `teach` and `wait-what`, and
+  [`prd-generator`](./skills/prd-generator/), which also writes down why its
+  batched interrogation is convergence with his `grilling` rather than a debt to
+  it. A credit nobody is owed is as dishonest as one that is missing, so those
+  are pointers, and the `Credit / origin` column below still names only real
+  sources.
+
 ---
 
 ## The catalog

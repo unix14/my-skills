@@ -146,3 +146,33 @@ all rights to their own work and wording. Nothing in `skill.md` is copied text
 from the sources above — it is an independent prompt that operationalises their
 publicly documented ideas. If you are one of these authors and want the
 attribution changed or this skill removed, open an issue and it will be handled.
+
+### On the batched questions, which is a fair thing to ask about
+
+Phase 1 here asks 5 to 8 numbered questions at a time and waits. Matt Pocock's
+[`grilling`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md)
+also batches: it asks every question on the *frontier* of a design tree in one
+numbered round, each with his recommended answer attached, then recomputes the
+frontier from what you said and asks the next round.
+
+The two were written independently and the resemblance stops at the first step.
+Batching numbered questions is the obvious correction to asking fifty questions
+one at a time; what makes his version work is absent here. There is no design
+tree, so no dependency ordering and no frontier. No question carries a
+recommended answer. There is one batch, not rounds that continue until nothing
+is left unasked. Convergence on an obvious idea, not a debt — recorded here
+rather than left for someone else to wonder about.
+
+What is true is that his interrogation is better than this one, and it is
+already in this repo: [`grill-me`](../grill-me/) is his skill, copied verbatim.
+Running that first and bringing the answers here for the document is a better
+sequence than using Phase 1 alone.
+
+Two more of his are adjacent without being sources
+([mattpocock/skills](https://github.com/mattpocock/skills), MIT):
+[`to-spec`](https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md)
+deliberately does not interview — it synthesises a spec out of a conversation
+you have already had and publishes it to your issue tracker — and
+[`to-questionnaire`](https://github.com/mattpocock/skills/blob/main/skills/productivity/to-questionnaire/SKILL.md)
+turns the questions you cannot answer yourself into a document for the person
+who can.
