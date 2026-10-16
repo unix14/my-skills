@@ -111,8 +111,9 @@ deliberately recognisable. Specific lineage:
   whose writing on product discovery and *Inspired* established the
   problem-before-solution discipline this skill enforces.
 - **Working backwards from the customer, written narrative over slides** —
-  [Amazon's PR/FAQ and "Working Backwards" method](https://www.aboutamazon.com/news/workplace/an-insider-look-at-amazons-culture-and-processes),
-  the origin of the "write the document first, build second" norm.
+  Amazon's PR/FAQ process, documented by Colin Bryar and Bill Carr in
+  [*Working Backwards*](https://www.workingbackwards.com/) — the origin of the
+  "write the document first, build second" norm.
 - **Counter-metrics and the single primary metric** — the
   [HEART framework, Rodden, Hutchinson & Fu, Google](https://research.google/pubs/measuring-the-user-experience-on-a-large-scale-user-centered-metrics-for-web-applications/),
   and Amplitude/Mixpanel-era analytics practice around guardrail metrics.
