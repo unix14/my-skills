@@ -21,6 +21,10 @@
 
   Rules (non-negotiable for this repo):
     - Every skill MUST credit its source or inspiration. No exceptions.
+    - If you are re-implementing a SPECIFIC published skill or prompt rather
+      than a general technique, say so in the FIRST line of Credits & Origin:
+      name the author, link the original file, note its license, and state
+      plainly what your version does differently and when to prefer theirs.
     - No secrets, no API keys, no PII, no client names in examples.
     - `skill.md` stays model-agnostic plain Markdown. No tool calls,
       no MCP, no shell commands, no build step.
@@ -103,6 +107,12 @@ in whichever LLM interface you use.
 ---
 
 ## Credits & Origin
+
+<!-- Re-implementing a specific published skill? Lead with this, then the pattern:
+**Original skill:** [`{{ORIGINAL_SKILL}}`]({{ORIGINAL_URL}}) by
+[{{ORIGINAL_AUTHOR}}]({{ORIGINAL_AUTHOR_URL}}) — {{ORIGINAL_LICENSE}}.
+What differs here: {{WHAT_DIFFERS}}. Prefer theirs when {{PREFER_THEIRS}}.
+-->
 
 **Pattern:** [{{SOURCE_TITLE}}]({{SOURCE_URL}}) — {{SOURCE_AUTHOR}}
 

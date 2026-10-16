@@ -41,13 +41,27 @@ prompts that behave consistently.
 are text files. Read them before you use them, the same way you would read a
 shell script before you pipe it to your shell.
 
+### Prior art
+
+Some skills here are re-implementations of a *specific published skill* by a
+named author, not just of a general technique. Those are called out at the top
+of their `Credits & Origin` section, and you should usually go read the original:
+
+- [**mattpocock/skills**](https://github.com/mattpocock/skills) — Matt Pocock's
+  own `.agents` directory, MIT licensed, and the origin of
+  [`grill-me`](./skills/grill-me/). His
+  [`grilling`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md)
+  is a different and better tool for stress-testing a *plan*; the version here
+  is aimed at stress-testing your *knowledge*. His repo has around thirty more
+  skills worth your time.
+
 ---
 
 ## The catalog
 
 | Skill | What it does | Category | Credit / origin |
 |---|---|---|---|
-| [**grill-me**](./skills/grill-me/) | A demanding interviewer that escalates one layer per answer until your understanding breaks, then debriefs you on exactly what cracked. | Thinking & Critique | [Socratic method](https://en.wikipedia.org/wiki/Socratic_method) · [testing effect](https://en.wikipedia.org/wiki/Testing_effect) |
+| [**grill-me**](./skills/grill-me/) | A demanding interviewer that escalates one layer per answer until your understanding breaks, then debriefs you on exactly what cracked. | Thinking & Critique | **Original:** [`grill-me`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md) by [Matt Pocock](https://github.com/mattpocock) · [Socratic method](https://en.wikipedia.org/wiki/Socratic_method) |
 | [**tldr**](./skills/tldr/) | Compresses any text, thread, or transcript to a 30-word takeaway, 3–5 key points, and the actions it implies. 150-word hard ceiling. | Communication & Tone | [BLUF](https://en.wikipedia.org/wiki/BLUF_(communication)) · [inverted pyramid](https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)) |
 | [**rubber-duck**](./skills/rubber-duck/) | A Socratic debugging partner that refuses to give you the answer and asks the questions that make you find it. | Code & Debugging | [*The Pragmatic Programmer*](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/), Hunt & Thomas |
 | [**devils-advocate**](./skills/devils-advocate/) | Steel-mans your plan, then attacks it across nine fronts — strongest objection first, each with the evidence that would refute it. | Thinking & Critique | [Red teaming](https://en.wikipedia.org/wiki/Red_team) · [pre-mortem](https://hbr.org/2007/09/performing-a-project-premortem), Gary Klein |
@@ -203,6 +217,12 @@ better; or it is a topical knowledge dump rather than a behavioural instruction 
 
 Rewording someone else's published prompt and crediting them properly is fine
 and welcome. Rewording it and claiming it is not.
+
+If your skill is a re-implementation of a **specific published skill** rather
+than of a general technique, lead the `Credits & Origin` section with it: the
+author, a link to the original file, its license, what your version does
+differently, and when the reader should prefer the original. See
+[`grill-me`](./skills/grill-me/#credits--origin) for the shape.
 
 ---
 

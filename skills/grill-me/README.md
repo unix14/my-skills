@@ -37,7 +37,8 @@ It works in two modes: *knowledge* (do you actually understand this?) and *plan*
 ### Don't use it when
 
 - You are trying to *learn* something new — get it explained first ([`eli5`](../eli5/)), then come here to test it.
-- You want your plan attacked rather than your understanding quizzed — use [`devils-advocate`](../devils-advocate/).
+- You want your plan attacked rather than your understanding quizzed — use [`devils-advocate`](../devils-advocate/),
+  or [Matt Pocock's `grilling`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md), which is built for exactly that.
 - You are low on patience or time; this is deliberately uncomfortable and is not a quick lookup.
 
 ---
@@ -88,22 +89,46 @@ in whichever LLM interface you use.
 
 ## Credits & Origin
 
-This skill is a Markdown re-implementation of long-established teaching and
-assessment practice. Specific lineage:
+**Original skill:** [`grill-me`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md)
+and its implementation [`grilling`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md),
+by **[Matt Pocock](https://github.com/mattpocock)** — from
+[mattpocock/skills](https://github.com/mattpocock/skills) ("Skills for Real
+Engineers"), MIT licensed, Copyright (c) 2026 Matt Pocock.
+
+The name `grill-me` and the idea of a skill whose entire job is to interview you
+relentlessly until nothing is left silently assumed are his. This skill exists
+because that one does. If you only install one, install his.
+
+### What differs here, and which one you want
+
+Matt's `grilling` works a **design tree**. It computes the *frontier* — every
+decision whose prerequisites are already settled — asks that whole frontier in
+one numbered round with a recommended answer for each question, and repeats as
+your answers push the frontier outward, until it is empty and you have shared
+understanding. It finds facts itself rather than asking you for anything it
+could look up. It is built to **converge on a plan** before any work starts.
+
+This version is narrower and deliberately adversarial: one question at a time,
+escalating one layer per answer (definition → mechanism → trade-off → failure →
+edge → design), no recommended answers offered, and a closing debrief naming
+what cracked. It is built to **test whether you actually understand something** —
+interview prep, a viva, a system you've just inherited.
+
+So: stress-testing a plan or a design → use
+[Matt's](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md).
+Stress-testing your own knowledge → this one.
+
+No text is copied from Matt's skills; `skill.md` here is an independently
+written prompt with a different mechanism, and the debt is to the concept and
+the name. Secondary lineage for the technique itself:
 
 - **Question-driven interrogation that exposes contradictions in the answerer's own words** — the
-  [Socratic method](https://en.wikipedia.org/wiki/Socratic_method), the original form of this technique.
+  [Socratic method](https://en.wikipedia.org/wiki/Socratic_method).
 - **Testing as a learning tool, not just a measurement** — the
-  [testing effect](https://en.wikipedia.org/wiki/Testing_effect) (retrieval practice),
-  the research finding that being quizzed produces better retention than re-reading.
-- **The "interview me" / adversarial-examiner prompt pattern** — popularised through community prompt
-  collections such as [awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
-  by Fatih Kadir Akın and contributors.
+  [testing effect](https://en.wikipedia.org/wiki/Testing_effect) (retrieval practice).
 - **Explicit role prompting and one-question-at-a-time process constraints** —
   [Anthropic's prompt engineering guidance](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview).
 
-All credit for these ideas belongs to their respective authors, who retain all
-rights to their own work and wording. `skill.md` contains no copied text from
-the sources above — it is an independent prompt that operationalises publicly
-documented patterns. If you are one of these authors and would like the
-attribution changed or this skill removed, open an issue and it will be handled.
+Matt Pocock retains all rights to his own work and wording. If he would like the
+attribution changed, expanded, or this skill removed, open an issue and it will
+be handled the same day.
