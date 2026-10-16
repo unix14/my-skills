@@ -232,7 +232,7 @@ RULES = [
 
     # ---- lower-severity hygiene ------------------------------------------
     ("net-fetch", MEDIUM, "Fetches remote content at run time",
-     r"(?:\b(?:curl|wget)\s+(?!-fsSL\s+https://raw\.githubusercontent\.com/unix14/)|"
+     r"(?:\b(?:curl|wget)\s+(?!-fsSL\s+[\"']?https://raw\.githubusercontent\.com/unix14/)|"
      r"\bfetch\s*\(\s*['\"]https?://|\brequests\.get\s*\(|\burllib\b)",
      "Remote content can change after you audit it. What you read is not what will run."),
 
