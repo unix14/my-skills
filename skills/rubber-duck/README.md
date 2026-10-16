@@ -127,3 +127,18 @@ rights to their own work and wording. `skill.md` contains no copied text from
 the sources above — it is an independent prompt that operationalises publicly
 documented patterns. If you are one of these authors and would like the
 attribution changed or this skill removed, open an issue and it will be handled.
+
+### See also, and not a source
+
+Matt Pocock's
+[`diagnosing-bugs`](https://github.com/mattpocock/skills/blob/main/skills/engineering/diagnosing-bugs/SKILL.md)
+([mattpocock/skills](https://github.com/mattpocock/skills), MIT) works the same
+ground from the opposite end. Its first and largest phase refuses to let the
+agent theorise at all until it has one fast, deterministic command that goes red
+on your actual bug; then it ranks three to five falsifiable hypotheses and
+instruments one variable at a time.
+
+Nothing here came from it. This skill withholds the answer on purpose and his is
+built to produce one, which is a real difference and not a framing of the same
+thing. But the honest advice is: if you want the bug found rather than the
+practice of finding it, use his.
