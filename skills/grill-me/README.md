@@ -121,6 +121,14 @@ In a plain chat interface, the trigger file is pointless — paste the contents 
 [`grilling.md`](./grilling.md) below its frontmatter as your system prompt or
 custom instruction, then describe the plan you want grilled.
 
+### Other agents
+
+Cursor, Copilot, Codex and the rest need a different path, and this skill's
+two-file shape has no equivalent outside Claude Code — merge `grilling.md` into
+one rule or `AGENTS.md` heading and drop the trigger. See
+[**docs/COMPATIBILITY.md**](../../docs/COMPATIBILITY.md), which also explains why
+an always-on context file is a poor fit for this particular skill.
+
 ---
 
 ## Credits & Origin

@@ -54,9 +54,24 @@ https://raw.githubusercontent.com/unix14/my-skills/main/skills/rubber-duck/skill
 
 ---
 
-## Install via AI
+## Install
 
-Paste this into your local AI agent (Claude Code, Cursor, Copilot CLI, Gemini CLI, or any agent that can fetch a URL and write a file):
+Pure Markdown with no dependencies, so this runs in any assistant that lets you
+set standing instructions — only the destination changes. Exact paths for Claude
+Code, Cursor, Copilot, Codex, Gemini and the rest are in
+[**docs/COMPATIBILITY.md**](../../docs/COMPATIBILITY.md). The three common routes:
+
+### 1. Paste it (any chat interface)
+
+Open [`skill.md`](./skill.md), copy everything below the YAML frontmatter, and
+paste it into ChatGPT's Custom GPT instructions, a Claude Project's custom
+instructions, a Gemini Gem, or just your first message. The frontmatter is
+harmless if you paste it too.
+
+### 2. Let your agent install it
+
+Paste this into Claude Code, Cursor, Copilot CLI, Gemini CLI, Codex, or any
+agent that can fetch a URL and write a file:
 
 ```text
 Install a new skill for me from a public URL.
@@ -64,29 +79,32 @@ Install a new skill for me from a public URL.
 1. Fetch the raw Markdown at:
    https://raw.githubusercontent.com/unix14/my-skills/main/skills/rubber-duck/skill.md
 
-2. Create the directory `.claude/skills/rubber-duck/` in my current project.
-   (Use `~/.claude/skills/rubber-duck/` instead if I want it available globally.)
+2. Work out where standing instructions belong for whichever assistant you are,
+   and save it there verbatim:
+   - Claude Code     .claude/skills/rubber-duck/SKILL.md  (the file must be SKILL.md)
+   - Cursor          .cursor/rules/rubber-duck.mdc  (.md is ignored there; replace the
+                     frontmatter with `description` + `alwaysApply: false`)
+   - GitHub Copilot  .github/instructions/rubber-duck.instructions.md  (frontmatter
+                     `applyTo: "**"`), or append to .github/copilot-instructions.md
+   - Codex, Zed, Aider, Warp, Windsurf, Jules, goose, opencode, Gemini CLI and
+     the other AGENTS.md readers: append it to AGENTS.md under its own heading
+   - anything else   your own equivalent — and tell me where you put it
 
-3. Save the fetched content verbatim as `SKILL.md` inside that directory.
-   Do not rewrite, summarise, or "improve" the instructions, and keep the
-   YAML frontmatter exactly as-is.
+3. Keep the instructions verbatim. Do not summarise or "improve" them, and do
+   not drop the `description` — that is how most tools decide when to load it.
 
-4. Confirm the skill is registered, then tell me the phrase that triggers it.
+4. Confirm it is registered, then tell me the phrase that triggers it.
 ```
 
-### Install manually
+Use `~/.claude/skills/` rather than `.claude/skills/` to install it globally.
+
+### 3. Shell
 
 ```bash
 mkdir -p .claude/skills/rubber-duck
 curl -fsSL https://raw.githubusercontent.com/unix14/my-skills/main/skills/rubber-duck/skill.md \
   -o .claude/skills/rubber-duck/SKILL.md
 ```
-
-### Install by copy-paste
-
-Open [`skill.md`](./skill.md), copy everything below the YAML frontmatter, and paste
-it as a system prompt, custom instruction, or Project / Custom GPT / Gem instruction
-in whichever LLM interface you use.
 
 ---
 

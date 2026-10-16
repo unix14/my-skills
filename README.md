@@ -2,10 +2,10 @@
 
 **A curated, open collection of practical AI skills — in plain Markdown.**
 
-[![Skills](https://img.shields.io/badge/skills-7-blue)](#the-catalog)
+[![Skills](https://img.shields.io/badge/skills-8-blue)](#the-catalog)
 [![Format](https://img.shields.io/badge/format-pure%20markdown-lightgrey)](#how-it-works)
 [![Dependencies](https://img.shields.io/badge/dependencies-none-success)](#how-it-works)
-[![Works with](https://img.shields.io/badge/works%20with-any%20LLM-8A2BE2)](#quick-start)
+[![Works with](https://img.shields.io/badge/works%20with-Claude%20%7C%20GPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Copilot-8A2BE2)](./docs/COMPATIBILITY.md)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-orange)](#contributing)
 
@@ -46,7 +46,7 @@ Skills here come in two kinds, and each one says which it is at the top of its
   folder.
 - If you are an author credited here and want the attribution corrected,
   expanded, or the skill removed entirely —
-  [open an issue](../../issues) and it will be handled.
+  [open an issue](https://github.com/unix14/my-skills/issues) and it will be handled.
 
 **Safety:** zero secrets, zero PII, zero telemetry, zero network calls. These
 are text files. Read them before you use them, the same way you would read a
@@ -71,6 +71,7 @@ shell script before you pipe it to your shell.
 | Skill | What it does | Category | Credit / origin |
 |---|---|---|---|
 | [**grill-me**](./skills/grill-me/) | Maps your plan as a design tree and interviews you in rounds — asking every question whose prerequisites are settled, each with a recommended answer — until nothing is left assumed. | Thinking & Critique | **Verbatim copy.** [`grill-me`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md) + [`grilling`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md) by [Matt Pocock](https://github.com/mattpocock), MIT |
+| [**quiz-me**](./skills/quiz-me/) | A demanding examiner that escalates one layer per answer until your understanding breaks, then debriefs you on exactly what cracked. | Thinking & Critique | Written here · [Socratic method](https://en.wikipedia.org/wiki/Socratic_method) · [testing effect](https://en.wikipedia.org/wiki/Testing_effect) |
 | [**tldr**](./skills/tldr/) | Compresses any text, thread, or transcript to a 30-word takeaway, 3–5 key points, and the actions it implies. 150-word hard ceiling. | Communication & Tone | [BLUF](https://en.wikipedia.org/wiki/BLUF_(communication)) · [inverted pyramid](https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)) |
 | [**rubber-duck**](./skills/rubber-duck/) | A Socratic debugging partner that refuses to give you the answer and asks the questions that make you find it. | Code & Debugging | [*The Pragmatic Programmer*](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/), Hunt & Thomas |
 | [**devils-advocate**](./skills/devils-advocate/) | Steel-mans your plan, then attacks it across nine fronts — strongest objection first, each with the evidence that would refute it. | Thinking & Critique | [Red teaming](https://en.wikipedia.org/wiki/Red_team) · [pre-mortem](https://hbr.org/2007/09/performing-a-project-premortem), Gary Klein |
@@ -83,35 +84,40 @@ shell script before you pipe it to your shell.
 - **Code & Debugging** — [rubber-duck](./skills/rubber-duck/)
 - **Product & Ideation** — [prd-generator](./skills/prd-generator/)
 - **Communication & Tone** — [tldr](./skills/tldr/), [humanizer](./skills/humanizer/)
-- **Thinking & Critique** — [grill-me](./skills/grill-me/), [devils-advocate](./skills/devils-advocate/)
+- **Thinking & Critique** — [grill-me](./skills/grill-me/), [quiz-me](./skills/quiz-me/), [devils-advocate](./skills/devils-advocate/)
 - **Learning & Explanation** — [eli5](./skills/eli5/)
 
 ---
 
 ## Quick start
 
-There are two ways to use any skill here. Both take under a minute.
+Every skill is a plain Markdown prompt with no dependencies. It runs in anything
+that accepts standing instructions — Claude, ChatGPT, Gemini, Cursor, Copilot,
+Codex, Zed, Aider, Windsurf, a local model. Only the destination changes, and
+[**docs/COMPATIBILITY.md**](./docs/COMPATIBILITY.md) has the verified path for
+each tool.
 
-### Method A — copy-paste (works in every LLM interface)
+Two ways in. Both take under a minute.
 
-1. Open the skill's folder and click [`skill.md`](./skills/prd-generator/skill.md).
-2. Copy everything **below the YAML frontmatter** (the part after the closing `---`).
+### Method A — copy-paste (works in every chat interface)
+
+1. Open any skill's `skill.md`, for example [`prd-generator`](./skills/prd-generator/skill.md).
+2. Copy everything **below the YAML frontmatter** (after the closing `---`).
 3. Paste it wherever your tool keeps standing instructions:
-   - **ChatGPT** → Custom GPT instructions, or a Project's instructions
-   - **Claude** → a Project's custom instructions, or the top of a new chat
-   - **Gemini** → a Gem's instructions
-   - **Cursor / Copilot / Windsurf** → a rules or instructions file
-   - **Anything else** → the system prompt field, or just the first message
-4. Describe your task. The skill takes over from there.
+   - **ChatGPT** → Custom GPT → *Instructions*, or a Project's instructions
+   - **Claude** → a Project's *custom instructions*, or the top of a new chat
+   - **Gemini** → a Gem's *instructions*
+   - **anything else** → the system prompt field, or just your first message
+4. Describe your task. The skill takes over.
 
-The frontmatter is harmless if you paste it too — it just helps agent
-frameworks register the skill by name.
+The frontmatter is harmless if you paste it too; it is only metadata for agent
+frameworks.
 
 ### Method B — let your AI agent install it
 
-Every skill is served over the GitHub raw URL, so any agent that can fetch a URL
-and write a file can install it for you. Paste this, with the skill name
-substituted:
+Each skill is served over a raw GitHub URL, so any agent that can fetch a URL and
+write a file can install it. This prompt works whichever agent you are talking to
+— it tells it to pick the right location for itself:
 
 ```text
 Install a new skill for me from a public URL.
@@ -119,19 +125,27 @@ Install a new skill for me from a public URL.
 1. Fetch the raw Markdown at:
    https://raw.githubusercontent.com/unix14/my-skills/main/skills/<skill-name>/skill.md
 
-2. Create the directory `.claude/skills/<skill-name>/` in my current project.
-   (Use `~/.claude/skills/<skill-name>/` instead if I want it available globally.)
+2. Work out where standing instructions belong for whichever assistant you are,
+   and save it there verbatim:
+   - Claude Code     .claude/skills/<skill-name>/SKILL.md  (must be SKILL.md)
+   - Cursor          .cursor/rules/<skill-name>.mdc  (.md is ignored there;
+                     replace the frontmatter with `description` + `alwaysApply: false`)
+   - GitHub Copilot  .github/instructions/<skill-name>.instructions.md
+                     (frontmatter `applyTo: "**"`), or append to
+                     .github/copilot-instructions.md
+   - Codex, Zed, Aider, Warp, Windsurf, Jules, goose, opencode, Gemini CLI and
+     the other AGENTS.md readers: append it to AGENTS.md under its own heading
+   - anything else   your own equivalent — and tell me where you put it
 
-3. Save the fetched content verbatim as `SKILL.md` inside that directory.
-   Do not rewrite, summarise, or "improve" the instructions, and keep the
-   YAML frontmatter exactly as-is.
+3. Keep the instructions verbatim. Do not summarise or "improve" them, and do
+   not drop the `description` — that is how most tools decide when to load it.
 
-4. Confirm the skill is registered, then tell me the phrase that triggers it.
+4. Confirm it is registered, then tell me the phrase that triggers it.
 ```
 
-Each skill's own README carries this prompt with the URL already filled in.
+Each skill's README carries this prompt with its own URL already filled in.
 
-### Method C — `curl`, for people who prefer the shell
+### Shell, for Claude Code
 
 ```bash
 SKILL=prd-generator
@@ -140,10 +154,10 @@ curl -fsSL "https://raw.githubusercontent.com/unix14/my-skills/main/skills/$SKIL
   -o ".claude/skills/$SKILL/SKILL.md"
 ```
 
-Install all seven at once:
+All seven single-file skills at once:
 
 ```bash
-for SKILL in tldr rubber-duck devils-advocate eli5 prd-generator humanizer; do
+for SKILL in tldr rubber-duck devils-advocate eli5 prd-generator humanizer quiz-me; do
   mkdir -p ".claude/skills/$SKILL"
   curl -fsSL "https://raw.githubusercontent.com/unix14/my-skills/main/skills/$SKILL/skill.md" \
     -o ".claude/skills/$SKILL/SKILL.md"
@@ -157,8 +171,10 @@ for PART in grill-me grilling; do
 done
 ```
 
-`grill-me` is a trigger that delegates to `grilling`, so installing only one of
-the two does nothing. See [its README](./skills/grill-me/) for why.
+`grill-me` is a trigger that delegates to `grilling`, so installing one without
+the other does nothing. See [its README](./skills/grill-me/) for why. Cursor,
+Copilot and Gemini CLI need a different path and a frontmatter swap —
+[docs/COMPATIBILITY.md](./docs/COMPATIBILITY.md) has the exact commands.
 
 ---
 
@@ -169,7 +185,9 @@ Each skill is a self-contained folder:
 ```
 my-skills/
 ├── README.md                              <- you are here
-├── LICENSE
+├── LICENSE                                <- MIT + third-party notices
+├── docs/
+│   └── COMPATIBILITY.md                   <- where a skill goes, per agent
 ├── skills/
 │   ├── devils-advocate/
 │   │   ├── README.md                      <- purpose, usage, install, credits
@@ -177,15 +195,18 @@ my-skills/
 │   ├── eli5/
 │   │   ├── README.md
 │   │   └── skill.md
-│   ├── grill-me/                      <- Matt Pocock's skill, copied verbatim
-│   │   ├── LICENSE-mattpocock         <- his notice, as his license requires
+│   ├── grill-me/                          <- Matt Pocock's skill, verbatim
+│   │   ├── LICENSE-mattpocock             <- his notice, as his license requires
 │   │   ├── README.md
-│   │   ├── grilling.md                <- the implementation skill.md delegates to
+│   │   ├── grilling.md                    <- what skill.md delegates to
 │   │   └── skill.md
 │   ├── humanizer/
 │   │   ├── README.md
 │   │   └── skill.md
 │   ├── prd-generator/
+│   │   ├── README.md
+│   │   └── skill.md
+│   ├── quiz-me/
 │   │   ├── README.md
 │   │   └── skill.md
 │   ├── rubber-duck/
@@ -204,7 +225,7 @@ my-skills/
 - **`README.md`** is for humans deciding whether to use it: what it does, when
   *not* to use it, the raw link, the install prompt, and the credits.
 - **Modular by design.** Skills never reference each other at runtime. Install
-  one or install all seven; nothing breaks either way.
+  one or install all eight; nothing breaks either way.
 
 ### Design rules every skill follows
 
@@ -229,7 +250,11 @@ New skills are welcome. The bar is attribution and discipline, not volume.
    to `skills/<your-skill>/README.md` and fill in every `{{PLACEHOLDER}}`.
 2. Write `skills/<your-skill>/skill.md` — frontmatter plus plain Markdown.
 3. Add a row to the catalog table above, with a category and a real credit link.
-4. Open a PR.
+4. If your skill needs anything host-specific, add a note to
+   [`docs/COMPATIBILITY.md`](./docs/COMPATIBILITY.md). Otherwise leave the
+   Install section as the template has it — the per-tool paths are maintained
+   in that one file, not copied into every skill.
+5. Open a PR.
 
 **A PR will be rejected if:** the skill has no source attribution or the link is
 dead; it requires MCP, tooling, or a build step; it contains secrets, API keys,
