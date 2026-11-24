@@ -55,7 +55,7 @@ Use this when I ask for a TL;DR, a summary, or key takeaways.
 
 One caveat worth knowing: `AGENTS.md` is **always-on context**, not an
 on-demand skill. Everything in it is sent with every prompt. One or two skills
-is fine; pasting all nine will bloat every request and the instructions will
+is fine; pasting all ten will bloat every request and the instructions will
 start competing with each other. For more than a couple, prefer a tool with real
 skill or rule files — Claude Code, Cursor, or Copilot — where each one loads only
 when it is relevant.
@@ -167,6 +167,10 @@ you would rather keep one portable file, point it at `AGENTS.md` via
   you. It also ships as **two files** (`skill.md` triggers, `grilling.md`
   implements), and installing one without the other does nothing. In a plain chat
   interface, paste `grilling.md` and ignore the trigger.
+- **[`wip`](../skills/wip/)** needs an agent that can run shell commands,
+  because it reads your working tree with `git status` and `git diff`. It only
+  runs read-only commands. In a plain chat interface, paste that output after
+  the prompt instead.
 - Every other skill is self-contained in a single file and assumes nothing about
   the host.
 
