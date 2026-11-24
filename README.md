@@ -2,7 +2,7 @@
 
 **A curated, open collection of practical AI skills — in plain Markdown.**
 
-[![Skills](https://img.shields.io/badge/skills-8-blue)](#the-catalog)
+[![Skills](https://img.shields.io/badge/skills-9-blue)](#the-catalog)
 [![Format](https://img.shields.io/badge/format-pure%20markdown-lightgrey)](#how-it-works)
 [![Dependencies](https://img.shields.io/badge/dependencies-none-success)](#how-it-works)
 [![Works with](https://img.shields.io/badge/works%20with-Claude%20%7C%20GPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Copilot-8A2BE2)](./docs/COMPATIBILITY.md)
@@ -132,6 +132,7 @@ than take from a badge:
 | [**grill-me**](./skills/grill-me/) | Maps your plan as a design tree and interviews you in rounds — asking every question whose prerequisites are settled, each with a recommended answer — until nothing is left assumed. | Thinking & Critique | **Verbatim copy.** [`grill-me`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md) + [`grilling`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md) by [Matt Pocock](https://github.com/mattpocock), MIT |
 | [**quiz-me**](./skills/quiz-me/) | A demanding examiner that escalates one layer per answer until your understanding breaks, then debriefs you on exactly what cracked. | Thinking & Critique | Written here · [Socratic method](https://en.wikipedia.org/wiki/Socratic_method) · [testing effect](https://en.wikipedia.org/wiki/Testing_effect) |
 | [**tldr**](./skills/tldr/) | Compresses any text, thread, or transcript to a 30-word takeaway, 3–5 key points, and the actions it implies. 150-word hard ceiling. | Communication & Tone | [BLUF](https://en.wikipedia.org/wiki/BLUF_(communication)) · [inverted pyramid](https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)) |
+| [**tahles**](./skills/tahles/) | Answers in the first line, then only the result, the risks, and what it needs from you. Risks before actions; your decision last. | Communication & Tone | [BLUF](https://en.wikipedia.org/wiki/BLUF_(communication)) · [plain language guidelines](https://www.plainlanguage.gov/guidelines/) |
 | [**rubber-duck**](./skills/rubber-duck/) | A Socratic debugging partner that refuses to give you the answer and asks the questions that make you find it. | Code & Debugging | [*The Pragmatic Programmer*](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/), Hunt & Thomas |
 | [**devils-advocate**](./skills/devils-advocate/) | Steel-mans your plan, then attacks it across nine fronts — strongest objection first, each with the evidence that would refute it. | Thinking & Critique | [Red teaming](https://en.wikipedia.org/wiki/Red_team) · [pre-mortem](https://hbr.org/2007/09/performing-a-project-premortem), Gary Klein |
 | [**eli5**](./skills/eli5/) | Explains hard things to a curious adult: a mapped analogy, where that analogy breaks, and the real term only at the end. | Learning & Explanation | [r/explainlikeimfive](https://www.reddit.com/r/explainlikeimfive/) · [Feynman technique](https://fs.blog/feynman-technique/) |
@@ -142,7 +143,7 @@ than take from a badge:
 
 - **Code & Debugging** — [rubber-duck](./skills/rubber-duck/)
 - **Product & Ideation** — [prd-generator](./skills/prd-generator/)
-- **Communication & Tone** — [tldr](./skills/tldr/), [humanizer](./skills/humanizer/)
+- **Communication & Tone** — [tldr](./skills/tldr/), [tahles](./skills/tahles/), [humanizer](./skills/humanizer/)
 - **Thinking & Critique** — [grill-me](./skills/grill-me/), [quiz-me](./skills/quiz-me/), [devils-advocate](./skills/devils-advocate/)
 - **Learning & Explanation** — [eli5](./skills/eli5/)
 
@@ -213,10 +214,10 @@ curl -fsSL "https://raw.githubusercontent.com/unix14/my-skills/main/skills/$SKIL
   -o ".claude/skills/$SKILL/SKILL.md"
 ```
 
-All seven single-file skills at once:
+All eight single-file skills at once:
 
 ```bash
-for SKILL in tldr rubber-duck devils-advocate eli5 prd-generator humanizer quiz-me; do
+for SKILL in tldr rubber-duck devils-advocate eli5 prd-generator humanizer quiz-me tahles; do
   mkdir -p ".claude/skills/$SKILL"
   curl -fsSL "https://raw.githubusercontent.com/unix14/my-skills/main/skills/$SKILL/skill.md" \
     -o ".claude/skills/$SKILL/SKILL.md"
@@ -271,6 +272,9 @@ my-skills/
 │   ├── rubber-duck/
 │   │   ├── README.md
 │   │   └── skill.md
+│   ├── tahles/
+│   │   ├── README.md
+│   │   └── skill.md
 │   └── tldr/
 │       ├── README.md
 │       └── skill.md
@@ -287,7 +291,7 @@ my-skills/
 - **`README.md`** is for humans deciding whether to use it: what it does, when
   *not* to use it, the raw link, the install prompt, and the credits.
 - **Modular by design.** Skills never reference each other at runtime. Install
-  one or install all eight; nothing breaks either way.
+  one or install all nine; nothing breaks either way.
 
 ### Design rules every skill follows
 

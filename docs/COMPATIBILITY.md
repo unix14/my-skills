@@ -55,7 +55,7 @@ Use this when I ask for a TL;DR, a summary, or key takeaways.
 
 One caveat worth knowing: `AGENTS.md` is **always-on context**, not an
 on-demand skill. Everything in it is sent with every prompt. One or two skills
-is fine; pasting all eight will bloat every request and the instructions will
+is fine; pasting all nine will bloat every request and the instructions will
 start competing with each other. For more than a couple, prefer a tool with real
 skill or rule files — Claude Code, Cursor, or Copilot — where each one loads only
 when it is relevant.
